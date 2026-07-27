@@ -10,8 +10,6 @@ LuaBoost is a WoW addon that improves addon-side runtime behavior with:
 - lightweight diagnostics
 - optional integration with `wow_optimize.dll`
 
-Designed for **WoW 3.3.5a (build 12340)**.
-
 ---
 
 ## Reviews
@@ -220,21 +218,6 @@ English is used as fallback for unsupported locales.
 
 ---
 
-## Project Structure
-
-```text
-LuaBoost/
-├── !LuaBoost/
-│   ├── !LuaBoost.toc
-│   ├── LuaBoost.lua
-│   ├── enUS.lua
-│   ├── koKR.lua
-│   └── deDE.lua
-└── README.md
-```
-
----
-
 ## Troubleshooting
 
 **Does LuaBoost do anything without the DLL?**  
@@ -251,3 +234,14 @@ Most of LuaBoost is safe. Potentially risky options remain optional and disabled
 ## License
 
 MIT License — use, modify, and distribute freely.
+
+---
+
+## Also for WoW 3.3.5a
+
+| Project | What it does |
+|---|---|
+| [wow_optimize](https://github.com/suprepupre/wow-optimize) | Engine-level optimization DLL - allocator, Lua VM, timers, file I/O, frame-time benchmark |
+| [WA_SafeGuard](https://github.com/suprepupre/WA_SafeGuard) | Backs up WeakAuras so a forced disconnect cannot wipe your auras |
+| [DefileAlert](https://github.com/suprepupre/DefileAlert) | Instant Defile target callout for the Lich King encounter |
+

@@ -1,0 +1,51 @@
+name: Bug report
+description: Lua error, stutter, or something not working
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: LuaBoost version
+      description: From `!LuaBoost.toc`, or the version printed in chat at login.
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens
+    validations:
+      required: true
+
+  - type: textarea
+    id: error
+    attributes:
+      label: Lua error text
+      description: >
+        The full error, with the stack trace. BugSack or `/console scriptErrors 1`
+        will show it. Paste it whole - the first line alone rarely identifies the
+        cause.
+      render: text
+    validations:
+      required: false
+
+  - type: input
+    id: addons
+    attributes:
+      label: Other addons involved
+      description: >
+        Especially DBM, WeakAuras, ElvUI or anything else that runs a lot of Lua.
+        If the problem goes away with only LuaBoost enabled, say so.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: dll
+    attributes:
+      label: Running wow_optimize.dll as well?
+      options:
+        - "Yes"
+        - "No"
+        - Not sure
+    validations:
+      required: true
