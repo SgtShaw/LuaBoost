@@ -69,21 +69,24 @@ When `wow_optimize.dll` is loaded, LuaBoost can:
 
 ## Current Public Integration Model
 
-The current public `wow_optimize.dll` builds are intentionally conservative.
+Verified against `wow_optimize.dll` **v3.19.2**: every shared global and every
+`LuaBoostC_*` function this addon uses is present, in both directions, so
+LuaBoost 1.9.7 needs no change to run with it.
 
 ### Public DLL features still relevant to LuaBoost
 - adaptive GC (LuaBoost delegates GC stepping to the DLL when present)
 - mimalloc redirect of WoW's static CRT heap (VA-fragmentation defense)
 - string table pre-sizing
 - string.format and Lua library fast paths
+- GetItemInfo result cache, on by default
 - loading and runtime optimizations
 
-### Public DLL features intentionally disabled
-- UI widget cache
-- GetSpellInfo / GetItemInfo (API) caches
-- Lua event coalescing
+### Not in the public DLL
+- UI widget cache, disabled after addon regressions
+- GetSpellInfo cache, removed: the function has no cacheable result
+- Lua event coalescing, compiled out
 
-Because of that, LuaBoost no longer shows old DLL API cache lines in slash commands.
+LuaBoost does not print DLL API cache lines in its slash commands.
 
 ---
 
