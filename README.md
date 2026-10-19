@@ -229,12 +229,11 @@ LuaBoost contains a Lua-side StatusBar-only ThrashGuard. When using current publ
 
 ---
 
----
-
 ## Localization
 
 Included locales:
 - `enUS`
+- `esMX`
 - `koKR`
 - `deDE`
 - `ruRU`
@@ -253,6 +252,15 @@ The current public DLL no longer exposes a meaningful public spell cache path. S
 
 **Are there taint risks?**  
 Most of LuaBoost is safe. Potentially risky options remain optional and disabled by default.
+
+---
+
+## Contributors
+
+- [SethNubth](https://github.com/SethNubth) — `esMX` localization ([#21](https://github.com/suprepupre/LuaBoost/issues/21))
+- [nadugi](https://github.com/nadugi) — `koKR` localization
+- [dadec666](https://github.com/dadec666) — `ruRU` localization ([#19](https://github.com/suprepupre/LuaBoost/issues/19))
+- [Shandrax](https://github.com/Shandrax) — bug reports & testing ([#20](https://github.com/suprepupre/LuaBoost/issues/20))
 
 ---
 
